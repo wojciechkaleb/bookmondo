@@ -1,0 +1,24 @@
+name: Run application tests
+on:
+  pull_request:
+    push: { branches: main }
+
+jobs:
+  test:
+    name: Application tests
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Export environment variables
+      uses: c-py/action-dotenv-to-setenv@v2
+      with:
+        env-file: .env.example
+
+    - name: Build docker images
+      run: docker-compose build
+
+    - name: Run tests against app container
+      run: docker-compose run app npm run test
