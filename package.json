@@ -1,5 +1,5 @@
 {
-  "name": "book-tracker",
+  "name": "bookmondo",
   "version": "0.0.1",
   "description": "Simple book tracker backend written in NestJS",
   "author": "Wojciech Kałębasiak",

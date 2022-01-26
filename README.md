@@ -1,4 +1,4 @@
-# Book tracker app
+# Bookmondo
 
 ## Installation
 
